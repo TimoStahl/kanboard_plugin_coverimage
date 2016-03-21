@@ -1,8 +1,7 @@
 <?php if (! empty($images)): ?>
 
 <?php 
-$cover_id = $this->container['coverimage']->getCoverimage($task['id']);
-//print_r( $this->container );
+$cover_id = $this->task->coverimage->getCoverimage($task['id']);
 ?>
 
 

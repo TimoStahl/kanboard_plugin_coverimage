@@ -3,8 +3,9 @@
 namespace Kanboard\Plugin\Coverimage\Model;
 
 use Kanboard\Model\Base;
+use Kanboard\Model\TaskFile;
 
-class Coverimage extends Base
+class Coverimage extends TaskFile
 {
     public function setCoverimage($task_id, $image_id){
         
