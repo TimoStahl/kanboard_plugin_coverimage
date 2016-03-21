@@ -21,7 +21,8 @@ class Coverimage extends TaskFile
     
     public function getCoverimage($task_id){
         
-        return $this->taskMetadata->get($task_id, 'coverimage');
+        $id = $this->taskMetadata->get($task_id, 'coverimage');
+        return $this->getById($id);
         
     }
 }

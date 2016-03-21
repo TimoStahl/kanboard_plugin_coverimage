@@ -18,8 +18,6 @@ class Coverimage extends Base
         
         $this->coverimage->setCoverimage($task['id'],$file['id']);
         
-        //$metadata = $this->taskMetadata->getAll($task['id']);
-        //print_r($metadata);
         $this->flash->success(t('Coverimage set.'));
         
         $this->response->redirect($this->helper->url->to('task', 'show', array('task_id' => $task['id'], 'project_id' => $task['project_id'])), true);
