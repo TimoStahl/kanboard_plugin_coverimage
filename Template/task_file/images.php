@@ -1,7 +1,7 @@
 <?php if (! empty($images)): ?>
 
 <?php 
-$cover_id = $this->task->coverimage->getCoverimage($task['id']);
+$coverimage = $this->task->coverimage->getCoverimage($task['id']);
 ?>
 
 
@@ -34,7 +34,7 @@ $cover_id = $this->task->coverimage->getCoverimage($task['id']);
                     </div>
                     <div class="file-thumbnail-description">
                         <?php
-                            if($file['id'] == $cover_id){
+                            if($file['id'] == $coverimage['id']){
                               echo  '<i class="fa fa-newspaper-o"></i>';
                             }
                         ?>
