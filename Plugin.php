@@ -9,8 +9,11 @@ class Plugin extends Base
 {
     public function initialize()
     {
-        
+        //Task Details
         $this->template->setTemplateOverride('task_file/images', 'coverimage:task_file/images'); 
+        
+        //Board
+        $this->hook->on('template:layout:css', 'plugins/Coverimage/assets/css/board.css');
         $this->template->hook->attach('template:board:private:task:after-title', 'coverimage:board/task');
         
         // Translation
@@ -43,7 +46,7 @@ class Plugin extends Base
     }
     public function getPluginVersion()
     {
-        return '1.0.0';
+        return '0.1.0';
     }
     public function getPluginHomepage()
     {

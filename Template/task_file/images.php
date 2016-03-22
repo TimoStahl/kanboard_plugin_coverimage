@@ -26,16 +26,19 @@ $coverimage = $this->task->coverimage->getCoverimage($task['id']);
                                 <?php endif ?>
                                 <li>
                                     <i class="fa fa-newspaper-o fa-fw"></i>
-                                    <?= $this->url->link(t('Coverimage'), 'Coverimage', 'set', array('plugin' => 'coverimage', 'task_id' => $task['id'], 'project_id' => $task['project_id'], 'file_id' => $file['id'])) ?>
+                                    <?php if($file['id'] != $coverimage['id']){ ?>
+                                        <?= $this->url->link(t('set as coverimage'), 'Coverimage', 'set', array('plugin' => 'coverimage', 'task_id' => $task['id'], 'project_id' => $task['project_id'], 'file_id' => $file['id'])) ?>
+                                    <?php } else { ?>
+                                        <?= $this->url->link(t('remove coverimage'), 'Coverimage', 'remove', array('plugin' => 'coverimage', 'task_id' => $task['id'], 'project_id' => $task['project_id'], 'file_id' => $file['id'])) ?>
+                                    <?php } ?>
                                 </li>
-                                
                             </ul>
                         </div>
                     </div>
                     <div class="file-thumbnail-description">
                         <?php
                             if($file['id'] == $coverimage['id']){
-                              echo  '<i class="fa fa-newspaper-o"></i>';
+                              echo  '<span class="tooltip" title="'.t('Coverimage').'"><i class="fa fa-newspaper-o"></i></span>';
                             }
                         ?>
                             <span class="tooltip" title='<?= t('Uploaded: %s', $this->dt->datetime($file['date'])).'<br>'.t('Size: %s', $this->text->bytes($file['size'])) ?>'>
