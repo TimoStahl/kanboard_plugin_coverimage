@@ -15,12 +15,13 @@ class Plugin extends Base
         //Board
         $this->hook->on('template:layout:css', 'plugins/Coverimage/assets/css/board.css');
         $this->template->hook->attach('template:board:private:task:after-title', 'coverimage:board/task');
-        
+
+	}
+
+	     public function onStartup()
+    {
         // Translation
-        $this->on('app.bootstrap', function($container) {
-            Translator::load($container['config']->getCurrentLanguage(), __DIR__.'/Locale');
-        });
-        
+        Translator::load($this->language->getCurrentLanguage(), __DIR__.'/Locale');
     }
 
     public function getClasses()
