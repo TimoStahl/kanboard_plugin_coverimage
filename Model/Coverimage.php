@@ -9,7 +9,7 @@ class Coverimage extends TaskFile
 {
     public function setCoverimage($task_id, $image_id){
         
-        $this->taskMetadata->save($task_id, ['coverimage' => $image_id]);
+        $this->taskMetadata->save($task_id, array('coverimage' => $image_id));
         
     }
     
