@@ -1,14 +1,14 @@
 <?php
 
 return array(
-    //'Coverimage' => '',
-    //'Uploaded: %s' => '',
-    //'Size: %s' => '',
-    //'Uploaded by %s' => '',
-    //'Download' => '',
-    //'Remove' => '',
-    //'set as coverimage' => '',
-    //'remove coverimage' => '',
-    //'Coverimage set.' => '',
-    //'Coverimage removed.' => '',
+    'Coverimage' => 'Jaquette',
+    'Uploaded: %s' => 'Téléchargée : %s',
+    'Size: %s' => 'Taille : %s',
+    'Uploaded by %s' => 'Téléchargée par %s',
+    'Download' => 'Télécharger',
+    'Remove' => 'Supprimer',
+    'set as coverimage' => 'Définir comme jaquette',
+    'remove coverimage' => 'Supprimer la jaquette',
+    'Coverimage set.' => 'Jaquette définie.',
+    'Coverimage removed.' => 'Jaquette supprimée.',
 );
