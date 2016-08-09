@@ -19,6 +19,8 @@ class CoverimageModel extends TaskFileModel {
     public function getCoverimage($task_id) {
 
         $id = $this->taskMetadataModel->get($task_id, 'coverimage');
+        if (!$id)
+          return(null);
         return $this->getById($id);
     }
 
