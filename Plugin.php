@@ -12,7 +12,7 @@ class Plugin extends Base {
         $this->template->setTemplateOverride('task_file/images', 'coverimage:task_file/images');
 
         //Board
-        $this->hook->on('template:layout:css', 'plugins/Coverimage/assets/css/board.css');
+        $this->hook->on('template:layout:css', array('template' => 'plugins/Coverimage/assets/css/board.css'));
         $this->template->hook->attach('template:board:private:task:after-title', 'coverimage:board/task');
     }
 
