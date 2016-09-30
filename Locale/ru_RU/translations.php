@@ -1,14 +1,14 @@
 <?php
 
 return array(
-    //'Coverimage' => '',
-    //'Uploaded: %s' => '',
-    //'Size: %s' => '',
-    //'Uploaded by %s' => '',
-    //'Download' => '',
-    //'Remove' => '',
-    //'set as coverimage' => '',
-    //'remove coverimage' => '',
-    //'Coverimage set.' => '',
-    //'Coverimage removed.' => '',
+    'Coverimage' => 'Обложка',
+    'Uploaded: %s' => 'Загружено: %s',
+    'Size: %s' => 'Размер: %s',
+    'Uploaded by %s' => 'Загрузил %s',
+    'Download' => 'Скачать',
+    'Remove' => 'Удалить',
+    'set as coverimage' => 'установить как обложку',
+    'remove coverimage' => 'удалить обложку',
+    'Coverimage set.' => 'Обложка установлена.',
+    'Coverimage removed.' => 'Обложка удалена.',
 );
