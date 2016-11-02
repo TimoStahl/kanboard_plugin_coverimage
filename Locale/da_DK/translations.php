@@ -1,6 +1,6 @@
 <?php
 
-return array(
+return [
     //'Coverimage' => '',
     //'Uploaded: %s' => '',
     //'Size: %s' => '',
@@ -11,4 +11,4 @@ return array(
     //'remove coverimage' => '',
     //'Coverimage set.' => '',
     //'Coverimage removed.' => '',
-);
+];
