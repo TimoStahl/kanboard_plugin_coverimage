@@ -3,7 +3,7 @@
        $file = $this->task->projectCoverimageModel->getCoverimage($project['id']);
          if(isset($file)){
        ?>
-       <span class="proj-cover-image">
+       <span class="avatar avatar-20 avatar-inline">
           <img src="<?= $this->url->href('FileViewerController', 'thumbnail', array('file_id' => $file['id'], 'project_id' => $project['id'], 'task_id' => $file['task_id'])) ?>" title="<?= $this->text->e($file['name']) ?>" alt="<?= $this->text->e($file['name']) ?>" height="25">    
        </span>
        <?php
