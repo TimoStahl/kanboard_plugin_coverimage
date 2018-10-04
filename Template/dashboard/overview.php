@@ -24,7 +24,7 @@
                         <strong><?= '#'.$project['id'] ?></strong>
                     <?php endif ?>
                     <?php
-                          $file = $this->task->coverimageModel->getCoverimage($task['id']);
+                          $file = $this->project->projectCoverimageModel->getCoverimage($project['id']);
                           if(isset($file)){
                     ?>
                           <span class="avatar-20">
