@@ -27,7 +27,7 @@ class Plugin extends Base {
         return array(
             'Plugin\Coverimage\Model' => array(
                 'CoverimageModel',
-            )
+            ),
             'Plugin\Coverimage\Model' => array(
                 'ProjectCoverimageModel',
             )
