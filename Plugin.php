@@ -24,15 +24,12 @@ class Plugin extends Base {
     }
 
     public function getClasses() {
-        return [
-            'Plugin\Coverimage\Model' => [
+        return array(
+            'Plugin\Coverimage\Model' => array(
                 'CoverimageModel',
-            ],
-            'Plugin\Coverimage\Model' => [
                 'ProjectCoverimageModel',
-            ],
-        ];
-        
+            )
+        );
     }
 
     public function getPluginName() {
