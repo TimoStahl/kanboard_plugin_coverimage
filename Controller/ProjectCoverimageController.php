@@ -8,7 +8,7 @@ use Kanboard\Controller\BaseController;
  * Coverimage
  *
  * @package controller
- * @author  BlueTeck
+ * @author  creecros
  */
 class ProjectCoverimageController extends BaseController {
 
