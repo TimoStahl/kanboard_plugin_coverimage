@@ -42,11 +42,11 @@ class Plugin extends Base {
     }
 
     public function getPluginAuthor() {
-        return 'BlueTeck';
+        return 'BlueTeck + creecros';
     }
 
     public function getPluginVersion() {
-        return '1.0.38.0';
+        return '1.2.5.0';
     }
 
     public function getPluginHomepage() {

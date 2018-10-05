@@ -14,12 +14,13 @@ This plugin adds a coverimage function to tasks on the board, and allows you to 
 ![image](https://user-images.githubusercontent.com/26339368/46497724-5dcfb180-c7e9-11e8-82ea-173d633f602d.png)
 
 
-Plugin for https://github.com/fguillot/kanboard
+Plugin for https://github.com/kanboard/kanboard
 
 Author
 ------
 
-- BlueTeck
+- [BlueTeck](https://github.com/BlueTeck)
+- [creecros](https://github.com/creecros)
 - License MIT
 
 Installation
