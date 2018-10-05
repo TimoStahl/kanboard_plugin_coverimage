@@ -1,5 +1,5 @@
 plugin=Coverimage
-version=1.0.38.1
+version=1.2.5
 
 all:
 	@ echo "Build archive for plugin ${plugin} version=${version}"
