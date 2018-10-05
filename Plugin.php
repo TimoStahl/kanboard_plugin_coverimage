@@ -10,6 +10,9 @@ class Plugin extends Base {
     public function initialize() {
         //Task Details
         $this->template->setTemplateOverride('task_file/images', 'coverimage:task_file/images');
+        $this->template->setTemplateOverride('project_overview/images', 'coverimage:project_overview/images');
+        $this->template->setTemplateOverride('dashboard/overview', 'coverimage:dashboard/overview');
+        $this->template->setTemplateOverride('project_list/project_title', 'coverimage:project_list/project_title');
 
         //Board
         $this->hook->on('template:layout:css', array('template' => 'plugins/Coverimage/assets/css/board.css'));
@@ -25,6 +28,7 @@ class Plugin extends Base {
         return array(
             'Plugin\Coverimage\Model' => array(
                 'CoverimageModel',
+                'ProjectCoverimageModel',
             )
         );
     }
