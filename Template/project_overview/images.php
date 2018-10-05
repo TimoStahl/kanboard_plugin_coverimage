@@ -12,6 +12,9 @@
                         'download' => $this->url->to('FileViewerController', 'download', array('file_id' => 'FILE_ID', 'project_id' => $project['id'])),
                     )
                 )) ?>
+                <?php 
+                   $coverimage = $this->task->projectCoverimageModel->getCoverimage($project['id']);
+                 ?>
 
                 <div class="file-thumbnail-content">
                     <div class="file-thumbnail-title">
