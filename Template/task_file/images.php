@@ -47,7 +47,7 @@ $coverimage = $this->task->coverimageModel->getCoverimage($task['id']);
                               echo  '<span class="tooltip" title="'.t('Coverimage').'"><i class="fa fa-newspaper-o"></i></span>';
                             }
                         ?>
-                            <span class="tooltip" title='<?= t('Uploaded: %s', $this->dt->datetime($file['date'])).'<br>'.t('Size: %s', $this->text->bytes($file['size'])) ?>'>
+                            <span class="tooltip" title='<?= t('Uploaded: %s', $this->dt->datetime($file['date'])).'&#013;&#010;'.t('Size: %s', $this->text->bytes($file['size'])) ?>'>
                                 <i class="fa fa-info-circle"></i>
                             </span>
                         <?php if (! empty($file['user_id'])): ?>
