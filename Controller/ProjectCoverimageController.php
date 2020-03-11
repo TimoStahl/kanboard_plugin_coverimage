@@ -20,7 +20,7 @@ class ProjectCoverimageController extends BaseController {
 
         $this->flash->success(t('Coverimage set.'));
 
-        $this->response->redirect($this->helper->url->to('ProjectViewController', 'show', array('project_id' => $project['id'])), true);
+        $this->response->redirect($this->helper->url->to('ProjectOverviewController', 'show', array('project_id' => $project['id'])), true);
     }
 
     public function remove() {
@@ -31,7 +31,7 @@ class ProjectCoverimageController extends BaseController {
 
         $this->flash->success(t('Coverimage removed.'));
 
-        $this->response->redirect($this->helper->url->to('ProjectViewController', 'show', array('project_id' => $project['id'])), true);
+        $this->response->redirect($this->helper->url->to('ProjectOverviewController', 'show', array('project_id' => $project['id'])), true);
     }
 
 }
