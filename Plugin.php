@@ -13,16 +13,16 @@ class Plugin extends Base
         //General style
         $this->hook->on('template:layout:css', array('template' => 'plugins/Coverimage/assets/css/board.css'));
 
-        //Task
-        $this->template->setTemplateOverride('task_file/images', 'coverimage:task_file/images');
+        //Task        
         $this->template->hook->attach('template:board:private:task:after-title', 'coverimage:board/task');
-
+        $this->template->hook->attach('template:task_file:images:dropdown', 'coverimage:task_file/images');
+        $this->template->hook->attach('template:task_file:images:before-thumbnail_description', 'coverimage:task_file/description');
+        
         //Dashboard
-        $this->template->setTemplateOverride('dashboard/overview', 'coverimage:dashboard/overview');
+        $this->template->hook->attach('template:dashboard:project:before-title', 'coverimage:dashboard/overview');
 
         //Project
-        $this->template->setTemplateOverride('project_overview/images', 'coverimage:project_overview/images');
-        $this->template->setTemplateOverride('project_list/project_title', 'coverimage:project_list/project_title');
+        $this->template->hook->attach('template:project_overview:images:dropdown', 'coverimage:project_overview/images');
     }
 
     public function onStartup()
@@ -58,7 +58,7 @@ class Plugin extends Base
 
     public function getPluginVersion()
     {
-        return '1.2.5.0';
+        return '1.2.14.0';
     }
 
     public function getPluginHomepage()
@@ -68,6 +68,6 @@ class Plugin extends Base
 
     public function getCompatibleVersion()
     {
-        return '>=1.2.5';
+        return '>=1.2.14';
     }
 }
