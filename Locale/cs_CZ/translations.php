@@ -1,14 +1,14 @@
 <?php
 
 return array(
-    //'Coverimage' => '',
-    //'Uploaded: %s' => '',
-    //'Size: %s' => '',
-    //'Uploaded by %s' => '',
-    //'Download' => '',
-    //'Remove' => '',
-    //'set as coverimage' => '',
-    //'remove coverimage' => '',
-    //'Coverimage set.' => '',
-    //'Coverimage removed.' => '',
+    'Coverimage' => 'Úvodní obrázek',
+    'Uploaded: %s' => 'Nahráno: %s',
+    'Size: %s' => 'Velikost: %s',
+    'Uploaded by %s' => 'Nahrál %s',
+    'Download' => 'Stáhnout',
+    'Remove' => 'Odebrat',
+    'set as coverimage' => 'nastavit jako úvodní obrázek',
+    'remove coverimage' => 'odebrat úvodní obrázek',
+    'Coverimage set.' => 'Úvodní obrázek nastaven.',
+    'Coverimage removed.' => 'Úvodní obrázek odebrán.',
 );
