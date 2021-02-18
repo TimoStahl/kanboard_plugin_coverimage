@@ -5,10 +5,10 @@ namespace Kanboard\Plugin\Coverimage\Model;
 use Kanboard\Model\TaskDuplicationModel;
 
 /**
- * New Task Finder model
- * Extends Group_assign Model
+ * CoverimageDuplicator Model
+ * Extends Task Duplication Model to duplicate metadata
  *
- * @package  Kanboard\Plugin\Group_assign\Model
+ * @package  Kanboard\Plugin\Coverimage\Model
  */
 class CoverimageDuplicator extends TaskDuplicationModel
 {
