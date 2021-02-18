@@ -4,6 +4,7 @@ namespace Kanboard\Plugin\Coverimage;
 
 use Kanboard\Core\Plugin\Base;
 use Kanboard\Core\Translator;
+use Kanboard\Core\Security\Role;
 
 class Plugin extends Base
 {
@@ -24,6 +25,9 @@ class Plugin extends Base
 
         //Project
         $this->template->hook->attach('template:project-overview:images:dropdown', 'coverimage:project_overview/images');
+        
+        //Permissions for public file view   
+        $this->applicationAccessMap->add('FileViewerController', array('thumbnail'), Role::APP_PUBLIC);
     }
 
     public function onStartup()
