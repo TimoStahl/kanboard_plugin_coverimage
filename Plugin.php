@@ -15,6 +15,7 @@ class Plugin extends Base
 
         //Task        
         $this->template->hook->attach('template:board:private:task:after-title', 'coverimage:board/task');
+        $this->template->hook->attach('template:board:public:task:after-title', 'coverimage:board/task');
         $this->template->hook->attach('template:task-file:images:dropdown', 'coverimage:task_file/images');
         $this->template->hook->attach('template:task-file:images:before-thumbnail-description', 'coverimage:task_file/description');
         
