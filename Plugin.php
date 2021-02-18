@@ -4,6 +4,8 @@ namespace Kanboard\Plugin\Coverimage;
 
 use Kanboard\Core\Plugin\Base;
 use Kanboard\Core\Translator;
+use Kanboard\Model\TaskDuplicationModel;
+use Kanboard\Plugin\Coverimage\Model\CoverimageDuplicator;
 use Kanboard\Core\Security\Role;
 
 class Plugin extends Base
@@ -28,6 +30,14 @@ class Plugin extends Base
         
         //Permissions for public file view   
         $this->applicationAccessMap->add('FileViewerController', array('thumbnail'), Role::APP_PUBLIC);
+
+        
+        if (!file_exists('plugins/MetaMagik')){
+                $this->container['taskDuplicationModel'] = $this->container->factory(function ($c) {
+                    return new CoverimageDuplicator($c);
+                });
+            }
+            
     }
 
     public function onStartup()
