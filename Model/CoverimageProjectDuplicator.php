@@ -2,7 +2,9 @@
 
 namespace Kanboard\Plugin\Coverimage\Model;
 
-use Kanboard\Model\TaskDuplicationModel;
+use Kanboard\Model\TaskProjectDuplicationModel;
+use Kanboard\Model\TaskFileModel;
+use Kanboard\Plugin\Coverimage\Model\CoverimageModel;
 
 /**
  * CoverimageDuplicator Model
@@ -10,16 +12,16 @@ use Kanboard\Model\TaskDuplicationModel;
  *
  * @package  Kanboard\Plugin\Coverimage\Model
  */
-class CoverimageDuplicator extends TaskDuplicationModel
+class CoverimageProjectDuplicator extends TaskProjectDuplicationModel
 {
     /**
-     * Extended taskDuplicatorModel
+     * Extended taskProjectDuplicationModel
      *
      */
-    public function duplicate($task_id)
+    public function duplicateToProject($task_id, $project_id, $swimlane_id = null, $column_id = null, $category_id = null, $owner_id = null)
     {
         // add duplicated task functions after duplicated
-        $new_task_id = parent::duplicate($task_id);
+        $new_task_id = parent::duplicateToProject($task_id, $project_id, $swimlane_id, $column_id, $category_id, $owner_id);
         
         // duplicate metadata
         if ($new_task_id !== false) {
@@ -30,7 +32,7 @@ class CoverimageDuplicator extends TaskDuplicationModel
         $file = $this->coverimageModel->getCoverimage($new_task_id);
         $file_id = $this->taskFileModel->create($new_task_id, $file['name'], $file['path'], $file['size']);
         $this->coverimageModel->setCoverimage($new_task_id, $file_id);
-
+        
         return $new_task_id;
         
     }
