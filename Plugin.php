@@ -4,10 +4,6 @@ namespace Kanboard\Plugin\Coverimage;
 
 use Kanboard\Core\Plugin\Base;
 use Kanboard\Core\Translator;
-use Kanboard\Model\TaskDuplicationModel;
-use Kanboard\Model\TaskProjectDuplicationModel;
-use Kanboard\Plugin\Coverimage\Model\CoverimageDuplicator;
-use Kanboard\Plugin\Coverimage\Model\CoverimageProjectDuplicator;
 use Kanboard\Core\Security\Role;
 
 class Plugin extends Base
@@ -33,12 +29,13 @@ class Plugin extends Base
         //Permissions for public file view   
         $this->applicationAccessMap->add('FileViewerController', array('thumbnail'), Role::APP_PUBLIC);
 
-        //Model extensions
-        $this->container['taskDuplicationModel'] = $this->container->factory(function ($c) {
-            return new CoverimageDuplicator($c);
-        });
-        $this->container['taskProjectDuplicationModel'] = $this->container->factory(function ($c) {
-            return new CoverimageProjectDuplicator($c);
+        $this->hook->on('model:task:duplication:aftersave', function ($ids) {            
+            $target_task_id = $ids['target_task_id'];
+            $source_task_id = $ids['source_task_id'];
+            
+            $file = $this->coverimageModel->getCoverimage($source_task_id);
+            $file_id = $this->taskFileModel->create($target_task_id, $file['name'], $file['path'], $file['size']);
+            $this->coverimageModel->setCoverimage($target_task_id, $file_id);
         });
 
     }
