@@ -7,8 +7,8 @@ return array(
     'Uploaded by %s' => 'Nahrál %s',
     'Download' => 'Stáhnout',
     'Remove' => 'Odebrat',
-    'Set as coverimage' => 'nastavit jako úvodní obrázek',
-    'Remove coverimage' => 'odebrat úvodní obrázek',
+    'Set as coverimage' => 'Nastavit jako úvodní obrázek',
+    'Remove coverimage' => 'Odebrat úvodní obrázek',
     'Coverimage set.' => 'Úvodní obrázek nastaven.',
     'Coverimage removed.' => 'Úvodní obrázek odebrán.',
 );
