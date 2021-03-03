@@ -7,8 +7,8 @@ return array(
     'Uploaded by %s' => 'Téléchargée par %s',
     'Download' => 'Télécharger',
     'Remove' => 'Supprimer',
-    'set as coverimage' => 'Définir comme jaquette',
-    'remove coverimage' => 'Supprimer la jaquette',
+    'Set as coverimage' => 'Définir comme jaquette',
+    'Remove coverimage' => 'Supprimer la jaquette',
     'Coverimage set.' => 'Jaquette définie.',
     'Coverimage removed.' => 'Jaquette supprimée.',
 );

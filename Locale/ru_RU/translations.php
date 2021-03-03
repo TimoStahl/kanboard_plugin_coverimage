@@ -7,8 +7,8 @@ return array(
     'Uploaded by %s' => 'Загрузил %s',
     'Download' => 'Скачать',
     'Remove' => 'Удалить',
-    'set as coverimage' => 'установить как обложку',
-    'remove coverimage' => 'удалить обложку',
+    'Set as coverimage' => 'установить как обложку',
+    'Remove coverimage' => 'удалить обложку',
     'Coverimage set.' => 'Обложка установлена.',
     'Coverimage removed.' => 'Обложка удалена.',
 );

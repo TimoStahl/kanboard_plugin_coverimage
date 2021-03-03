@@ -7,8 +7,8 @@ return array(
     //'Uploaded by %s' => '',
     //'Download' => '',
     //'Remove' => '',
-    //'set as coverimage' => '',
-    //'remove coverimage' => '',
+    //'Set as coverimage' => '',
+    //'Remove coverimage' => '',
     //'Coverimage set.' => '',
     //'Coverimage removed.' => '',
 );
