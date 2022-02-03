@@ -2,6 +2,8 @@
 
 This plugin adds a coverimage function to tasks on the board, and allows you to set a project image to use as a logo for projects.
 
+This software is in maintenance mode. It doesn't mean it's abandoned, but there is no significant feature development. Pull-requests are still accepted as long as the guidelines are followed.
+
 ## Image for tasks
 
 ![cover_screenshot](https://cloud.githubusercontent.com/assets/1961634/23507319/c7e38892-ff4c-11e6-90c5-453f9bda4a0f.png)
